@@ -28,4 +28,5 @@ class Song
         $this->name = $name;
         $this->numberOfPlays = $numberOfPlays;
     }
+
 }
