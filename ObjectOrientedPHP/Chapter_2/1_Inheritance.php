@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once 'PhysicalBook.php';
 require_once 'DigitalBook.php';
 
-$physicalBook = new PhysicalBook('A Random Book', 'John Doe', 2000, 300);
+$physicalBook = new PhysicalBook2('A Random Book', 'John Doe', 2000, 300);
 $digitalBook = new DigitalBook('A Random Book', 'John Doe', 1000, 1048);
 $book = new Book('A Random Book', 'John Doe', 2000);
 

@@ -2,7 +2,7 @@
 require_once 'Book.php';
 
 /**
- * Class PhysicalBook
+ * Class PhysicalBook2
  *
  * @author Valentin Valkanov <valentinvalkanof@gmail.com>
  * @copyright
