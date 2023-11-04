@@ -1,4 +1,7 @@
 <?php declare(strict_types=1);
+
+use JetBrains\PhpStorm\Pure;
+
 require_once 'Book.php';
 
 /**
@@ -30,7 +33,7 @@ class PhysicalBook_2 extends Book
         return $this->weight;
     }
 
-    public function write(): string
+    #[Pure] public function write(): string
     {
         return "Title: {$this->getTitle()}, weight: {$this->weight}";
     }
