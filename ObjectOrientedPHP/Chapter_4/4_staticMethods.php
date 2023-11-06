@@ -1,7 +1,7 @@
 <?php
-require_once 'Book.php';
+require_once 'BookChapter_4.php';
 
 try {
-    echo Book::generateHexId();
+    echo BookChapter_4::generateHexId();
 } catch (Exception $e) {
 }

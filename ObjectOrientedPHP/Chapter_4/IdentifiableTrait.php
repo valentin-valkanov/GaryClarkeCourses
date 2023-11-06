@@ -18,10 +18,19 @@ trait IdentifiableTrait
         return bin2hex(random_bytes(7));
     }
 
-    abstract public function getId(): int;
+    /**
+     * @return string
+     */
+    abstract public function getId(): string;
 
+    /**
+     * @return string
+     */
     abstract public function getName(): string;
 
+    /**
+     * @return void
+     */
     public function printIdentity(): void
     {
         echo $this->getId() . ' : ' . $this->getName() . PHP_EOL;

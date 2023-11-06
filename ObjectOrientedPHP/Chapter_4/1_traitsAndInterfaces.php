@@ -1,15 +1,15 @@
 <?php
 
-require_once 'Book.php';
-require_once 'Song.php';
+require_once 'BookChapter_4.php';
+require_once 'SongChapter_4.php';
 
-$book = new Book();
+$book = new BookChapter_4();
 try {
     echo $book->getHexId();
 } catch (Exception $e) {
 }
 
-$song = new Song();
+$song = new SongChapter_4();
 try {
     echo $song->getHexId() . PHP_EOL;
 } catch (Exception $e) {

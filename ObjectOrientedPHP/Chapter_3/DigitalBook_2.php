@@ -8,7 +8,7 @@
  * @copyright
  * @version
  */
-class DigitalBook_2 extends Book
+class DigitalBook_2 extends BookChapter_4
 {
 
     /**

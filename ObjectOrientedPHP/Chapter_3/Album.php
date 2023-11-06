@@ -14,10 +14,10 @@ class Album implements SongHolder
     private array $songs = [];
 
     /**
-     * @param Song $song
+     * @param SongChapter_4 $song
      * @return void
      */
-    public function addSong(Song $song): void
+    public function addSong(SongChapter_4 $song): void
     {
         $this->songs[] = $song;
     }

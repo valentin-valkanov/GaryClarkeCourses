@@ -6,7 +6,7 @@ require_once 'DigitalBook.php';
 
 $physicalBook = new PhysicalBook2('A Random Book', 'John Doe', 2000, 300);
 $digitalBook = new DigitalBook('A Random Book', 'John Doe', 1000, 1048);
-$book = new Book('A Random Book', 'John Doe', 2000);
+$book = new BookChapter_4('A Random Book', 'John Doe', 2000);
 
 echo $physicalBook->print() .PHP_EOL;
 echo $digitalBook->print() .PHP_EOL;

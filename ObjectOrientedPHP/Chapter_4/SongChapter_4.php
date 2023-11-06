@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 require_once 'IdentifiableTrait.php';
-require_once 'Identifiable.php';
+require_once 'IdentifiableChapter4.php';
 require_once 'IdentifiableTraitImposter.php';
 
 /**
@@ -11,7 +11,7 @@ require_once 'IdentifiableTraitImposter.php';
  * @copyright
  * @version
  */
-class Song implements Identifiable
+class SongChapter_4 implements IdentifiableChapter4
 {
     use IdentifiableTrait;
     use IdentifiableTraitImposter{
@@ -19,8 +19,16 @@ class Song implements Identifiable
         IdentifiableTrait::getHexId as getOriginalHexId;
     }
 
+    private string $name;
+    private int $id;
+
     public function getId(): string
     {
-        return 'ID returned from class';
+        return 'ID returned from the class';
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 }

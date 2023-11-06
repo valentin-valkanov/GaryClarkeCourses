@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Book.php';
+require_once 'BookChapter_4.php';
 
-$book = new Book(1, 'Hamlet');
+$book = new BookChapter_4(1, 'Hamlet');
 $book->printIdentity();
 
 

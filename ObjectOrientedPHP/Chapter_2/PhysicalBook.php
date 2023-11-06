@@ -8,7 +8,7 @@ require_once 'Book.php';
  * @copyright
  * @version
  */
-class PhysicalBook extends Book
+class PhysicalBook extends BookChapter_4
 {
     /**
      * @var int
