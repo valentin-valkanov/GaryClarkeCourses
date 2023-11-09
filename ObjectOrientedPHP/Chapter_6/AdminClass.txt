@@ -1,0 +1,15 @@
+Class name: App\Admin
+Parent class name: App\User
+Interface names: App\AuthenticatedUserInterface
+Trait names: 
+Trait aliases: 
+Static properties: 
+Default properties: 
+Is Cloneable
+Is Instantiable
+Not internal
+File name: C:\xampp\htdocs\GaryClarkeCourses\ObjectOrientedPHP\Chapter_6\src\Admin.php
+Start line: 12
+End line: 15
+Length: 15
+Short name: Admin
