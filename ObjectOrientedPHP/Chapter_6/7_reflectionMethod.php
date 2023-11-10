@@ -43,4 +43,4 @@ foreach ($parentMethods as $method){
 }
 
 $methodText= 'C:\xampp\htdocs\GaryClarkeCourses\ObjectOrientedPHP\Chapter_6\ReflectionMethod.txt';
-fwrite(fopen($methodText, 'w'), $content);
+fwrite(fopen($methodText, 'wb'), $content);
