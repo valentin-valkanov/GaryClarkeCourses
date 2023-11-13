@@ -3,8 +3,8 @@ Parent class short name: User
 Parent class methods: 
 
 Method name: __construct
-Method start line: 7
-Method end line: 9
+Method start line: 11
+Method end line: 13
 Method length: 3
 Method is public
 Method parameters: 
@@ -12,22 +12,22 @@ Method parameters:
 1: string name
 ----------------------------------------------------
 Method name: getId
-Method start line: 14
-Method end line: 17
+Method start line: 18
+Method end line: 21
 Method length: 4
 Method is public
 Method parameters: 
 ----------------------------------------------------
 Method name: getName
-Method start line: 22
-Method end line: 25
+Method start line: 26
+Method end line: 29
 Method length: 4
 Method is public
 Method parameters: 
 ----------------------------------------------------
 Method name: setPassword
-Method start line: 27
-Method end line: 30
+Method start line: 35
+Method end line: 38
 Method length: 4
 Method is private
 Method parameters: 

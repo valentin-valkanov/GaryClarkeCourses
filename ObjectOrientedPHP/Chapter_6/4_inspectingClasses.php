@@ -13,5 +13,6 @@ $parentClass = get_parent_class($admin);
 $isSubClass = is_subclass_of($admin, \App\User::class);
 $claasImplements = class_implements($admin);
 $userInstance = is_a($admin, \App\AuthenticatedUserInterface::class);
+$classImplements = class_implements(\App\Admin::class);
 
-dd($userInstance);
+dd($classImplements);

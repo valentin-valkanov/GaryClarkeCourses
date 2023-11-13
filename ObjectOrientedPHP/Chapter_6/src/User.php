@@ -4,6 +4,10 @@ namespace App;
 
 class User implements AuthenticatedUserInterface
 {
+    /**
+     * @param int $id
+     * @param string $name
+     */
     public function __construct(private int $id, public string $name)
     {
     }
@@ -24,6 +28,10 @@ class User implements AuthenticatedUserInterface
         return $this->name;
     }
 
+    /**
+     * @param string $password
+     * @return string
+     */
     private function setPassword(string $password): string
     {
         return 'Setting password... ';

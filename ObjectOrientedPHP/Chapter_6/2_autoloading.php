@@ -1,6 +1,6 @@
 <?php
 
-$simpleAutoload = function(string $classname) {
+$simpleAutoload = static function(string $classname) {
   if(file_exists("{$classname}.php")) {
       require_once "{$classname}.php";
   }

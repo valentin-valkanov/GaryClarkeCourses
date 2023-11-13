@@ -39,4 +39,4 @@ $content .= "End line: " . $adminClass->getEndLine() . PHP_EOL;
 $content .= "Length: " . $length . PHP_EOL;
 $content .= "Short name: " . $shortName . PHP_EOL;
 
-fwrite(fopen($classTxt, 'w'), $content);
+fwrite(fopen($classTxt, 'wb'), $content);
