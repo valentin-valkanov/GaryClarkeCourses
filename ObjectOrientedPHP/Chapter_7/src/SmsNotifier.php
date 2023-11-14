@@ -9,7 +9,7 @@ namespace App;
  * @copyright
  * @version
  */
-class SmsNotifier
+class SmsNotifier implements NotifierInterface
 {
     public function send($to): void
     {

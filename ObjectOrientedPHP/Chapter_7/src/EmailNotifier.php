@@ -9,9 +9,9 @@ namespace App;
  * @copyright
  * @version
  */
-class EmailNotifier
+class EmailNotifier implements NotifierInterface
 {
-    public function send($to)
+    public function send($to): void
     {
         echo 'Send email ' . $to . PHP_EOL;
     }

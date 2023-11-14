@@ -15,8 +15,7 @@ class Song
 {
     public function __construct(public string $title,
                                 public string $artist,
-                                public int $duration,
-                                private SongDataWriter $writer)
+                                public int $duration)
     {
     }
 
@@ -24,9 +23,9 @@ class Song
      * @return string
      */
     #[Pure]
-    public function write(): string
+    public function write(SongWriterInterface $writer): string
     {
-        return $this->writer->write($this);
+        return $writer->write($this);
     }
 
     public function getDurationInMinutes(): string

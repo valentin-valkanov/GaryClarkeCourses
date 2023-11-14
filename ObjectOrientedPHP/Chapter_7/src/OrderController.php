@@ -11,7 +11,7 @@ namespace App;
  */
 class OrderController
 {
-    public function create(Order $order, SmsNotifier $notifier ): void
+    public function create(Order $order, NotifierInterface $notifier ): void
     {
         echo 'Saving order to the database...';
 
