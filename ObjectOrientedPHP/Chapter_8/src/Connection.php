@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 namespace App;
 use PDO;
 use PDOException;
@@ -12,18 +13,19 @@ use PDOException;
  */
 class Connection
 {
-    private static mixed $instance = null;
+    private static ?Connection $instance = null;
     private PDO $pdo;
-
     private string $host = 'localhost';
     private string $dbname = 'chapter_8';
     private string $charset = 'utf8mb4';
-
     private const OPTIONS = [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
 
+    /**
+     * @return void
+     */
     private function __construct()
     {
         $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}";
@@ -36,9 +38,9 @@ class Connection
     }
 
     /**
-     * @return mixed
+     * @return Connection
      */
-    public static function getInstance(): mixed
+    public static function getInstance(): self
     {
         if(self::$instance === null){
             self::$instance = new self();
@@ -53,7 +55,4 @@ class Connection
     {
         return $this->pdo;
     }
-
-
-
 }
