@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace App\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
@@ -22,39 +23,25 @@ class Song
     private ?Artist $artist;
 
     #[ORM\ManyToMany(targetEntity: 'Playlist', mappedBy: 'songs')]
-    private ?Playlist $playlists;
+    private $playlists;
 
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string|null
-     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFileLocation(): ?string
     {
         return $this->fileLocation;
     }
 
-    /**
-     * @return Artist|null
-     */
     public function getArtist(): ?Artist
     {
         return $this->artist;
     }
-    
-
 }
