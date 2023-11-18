@@ -18,6 +18,12 @@ class Song
     #[ORM\Column(name: 'file_location', type: 'string')]
     private ?string $fileLocation;
 
+    #[ORM\ManyToOne(targetEntity: 'Artist', inversedBy: 'songs')]
+    private ?Artist $artist;
+
+    #[ORM\ManyToMany(targetEntity: 'Playlist', mappedBy: 'songs')]
+    private ?Playlist $playlists;
+
     /**
      * @return int|null
      */
@@ -42,5 +48,13 @@ class Song
         return $this->fileLocation;
     }
 
+    /**
+     * @return Artist|null
+     */
+    public function getArtist(): ?Artist
+    {
+        return $this->artist;
+    }
+    
 
 }

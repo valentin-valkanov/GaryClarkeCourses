@@ -14,6 +14,9 @@ class Artist
     #[ORM\Column(type: 'string')]
     private ?string $name;
 
+    #[ORM\OneToMany(mappedBy: 'artist', targetEntity: 'Song')]
+    private Song $songs;
+
 
     /**
      * @return int|null
