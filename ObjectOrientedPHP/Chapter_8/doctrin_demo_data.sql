@@ -1,6 +1,6 @@
 USE `doctrine-demo`;
 
-INSERT INTO artist (name) VALUES ('The Beatles'), ('Wings');
+INSERT INTO artists (name) VALUES ('The Beatles'), ('Wings');
 
 INSERT INTO songs (name, file_location, artist_id) VALUES ('Hey Jude', '/pat/to/hey-jude.mp)', 1);
 INSERT INTO songs (name, file_location, artist_id) VALUES ('Jet', '/pat/to/jet.mp3)', 2);

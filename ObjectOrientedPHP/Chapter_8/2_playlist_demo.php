@@ -5,8 +5,8 @@ require_once 'vendor/autoload.php';
 $connection = \App\MySQL\Connection::getInstance();
 $entityManager = $connection->getEntityManager();
 
-$playlist = $entityManager->getRepository(\App\Entity\Playlist::class)->find(1);
 
+$playlist = $entityManager->getRepository(\App\Entity\Playlist::class)->find(1);
 ?>
 
 <!doctype html>

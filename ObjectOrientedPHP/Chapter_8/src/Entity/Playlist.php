@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use JetBrains\PhpStorm\Pure;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'playlists')]
@@ -24,6 +25,7 @@ class Playlist
     #[ORM\JoinTable(name: 'playlist_song')]
     private $songs;
 
+    #[Pure]
     public function __construct()
     {
         $this->songs = new ArrayCollection();
@@ -33,6 +35,7 @@ class Playlist
     {
         return $this->id;
     }
+
 
     public function getName(): ?string
     {

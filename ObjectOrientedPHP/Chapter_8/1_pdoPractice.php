@@ -14,7 +14,7 @@ $statement = $pdo->query('SELECT * FROM playlist');
 //    print $row['name'] . PHP_EOL;
 //
 //}
-
+//----------------
 $stmt = $pdo->prepare('SELECT * FROM playlist WHERE name LIKE ?');
 $stmt->execute(['%Ballads%']);
 $playlist = $stmt->fetch();
@@ -22,6 +22,7 @@ $playlist = $stmt->fetch();
 $stmt = $pdo->prepare('SELECT * FROM playlist WHERE name LIKE :name AND category = :category');
 $stmt->execute(['name' => '%Power Ballads%', 'category' => strtolower('Soft Rock')]);
 $playlist = $stmt->fetch();
+//-----------------
 
 //$stmt = $pdo->prepare('INSERT INTO playlist (name, category) VALUES (:name, :category)');
 //$stmt->execute(['name' => 'Beach Party', 'category' => 'dance']);
@@ -34,7 +35,7 @@ $playlist = $stmt->fetch();
 //foreach ($stmt as $row){
 //    print $row['name'] . PHP_EOL;
 //}
-
+//------------
 $stmt = $pdo->prepare('SELECT name FROM playlist WHERE id = :id');
 $stmt->execute(['id' => 1]);
 $name = $stmt->fetchColumn();
@@ -44,6 +45,6 @@ $count = $pdo->query('SELECT count(*) FROM playlist')->fetchColumn();
 $playlists = $pdo->query('SELECT * FROM playlist')->fetchAll(PDO::FETCH_CLASS, \App\Playlist::class);
 
 foreach ($playlists as $playlist){
-    print $playlist->getName() . PHP_EOL;
+    print $playlist->getCategory() . PHP_EOL;
 }
 
