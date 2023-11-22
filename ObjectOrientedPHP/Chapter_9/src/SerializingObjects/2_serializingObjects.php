@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
+namespace App\SerializingObjects;
 
-require_once 'vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 class Manager
 {
@@ -17,16 +18,14 @@ class Department
     public function __construct(public string $name)
     {
     }
-    public function __sleep(): array
-    {
-        return ['name'];
-    }
 }
 
 $manager = new Manager('Manager A');
-
 $sales = new Department('sales');
+$sales->manager = $manager;
 
 $ser = serialize($sales);
+$un = unserialize($ser);
 
-dd($ser);
+$un->manager->name = 'Manager B';
+dd($sales, $un);

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+namespace App\Intro;
+require_once '../../vendor/autoload.php';
 
 $string = serialize('this is a string');
 
