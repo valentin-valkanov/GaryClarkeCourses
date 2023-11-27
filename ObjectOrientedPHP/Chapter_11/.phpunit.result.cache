@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CartTest::testCorrectPriceIsReturned":7},"times":{"CartTest::testCorrectPriceIsReturned":0.006,"CartTest::the_cart_tax_value_can_be_changed_statically":0.006,"CartTest::testCorrectNetPriceIsReturned":0}}

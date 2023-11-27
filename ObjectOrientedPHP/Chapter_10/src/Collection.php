@@ -10,16 +10,9 @@ use Traversable;
 use function array_key_exists;
 use function count;
 
-/**
- * Class Collection
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Collection implements \IteratorAggregate, \Countable, \ArrayAccess
 {
-    public function __construct(private array $elements= [])
+    public function __construct(private array $elements = [])
     {
     }
 

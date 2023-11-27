@@ -4,13 +4,6 @@ namespace App;
 use PDO;
 use PDOException;
 
-/**
- * Class Connection
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Connection
 {
     private static ?Connection $instance = null;
@@ -23,9 +16,6 @@ class Connection
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
 
-    /**
-     * @return void
-     */
     private function __construct()
     {
         $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}";
@@ -37,9 +27,6 @@ class Connection
         }
     }
 
-    /**
-     * @return Connection
-     */
     public static function getInstance(): self
     {
         if(self::$instance === null){
@@ -48,9 +35,6 @@ class Connection
         return self::$instance;
     }
 
-    /**
-     * @return PDO|null
-     */
     public function getPdo(): ?PDO
     {
         return $this->pdo;

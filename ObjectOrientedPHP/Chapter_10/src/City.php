@@ -4,10 +4,7 @@ namespace App;
 
 /**
  * Class City
- *
  * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
  */
 class City
 {

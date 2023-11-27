@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,19 +19,11 @@ class Artist
     #[ORM\OneToMany(mappedBy: 'artist', targetEntity: 'Song')]
     private  $songs;
 
-
-    /**
-     * @return int|null
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-
-    /**
-     * @return string|null
-     */
     public function getName(): ?string
     {
         return $this->name;
