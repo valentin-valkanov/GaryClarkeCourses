@@ -2,14 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 
-
-/**
- * Class ExampleTest
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class ExampleTest extends TestCase
 {
     public function testItWorks(): void

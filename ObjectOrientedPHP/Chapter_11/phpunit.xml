@@ -7,7 +7,7 @@
          failOnRisky="true"
          failOnWarning="true"
          colors="true"
-         cashResult="false"
+         cacheResult="false"
 >
 
     <testsuites>

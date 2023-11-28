@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 class Product
 {
     public function __construct(public string $name = 'Tyres', public int $price = 15)

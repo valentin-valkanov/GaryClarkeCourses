@@ -6,12 +6,13 @@ require_once 'Song.php';
 
 $playlist = new Playlist;
 
-$song1 = new SongChapter_4('Blackbird', 15);
-$song2 = new SongChapter_4('Yesterday', 15);
+$song1 = new Song('Blackbird', 15);
+$song2 = new Song('Yesterday', 15);
 
 $playlist->addSong ($song1);
 $playlist->addSong ($song2);
 
-foreach ($playlist->songs as $song){
+foreach ($playlist->getSongs() as $song){
     echo $song->name . PHP_EOL;
+    echo $song->numberOfPlays . PHP_EOL;
 }

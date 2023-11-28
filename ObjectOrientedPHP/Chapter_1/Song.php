@@ -1,9 +1,6 @@
-<?php declare(strict_types=1);
-
-
+<?php
 /**
  * Class Song
- *
  * @author Valentin Valkanov <valentinvalkanof@gmail.com>
  * @copyright
  * @version
@@ -28,5 +25,4 @@ class Song
         $this->name = $name;
         $this->numberOfPlays = $numberOfPlays;
     }
-
 }

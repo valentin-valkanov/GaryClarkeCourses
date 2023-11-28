@@ -1,5 +1,5 @@
 <?php
-class Product
+class  Product
 {
     public string $name ='soap';
     public int $price = 100;
