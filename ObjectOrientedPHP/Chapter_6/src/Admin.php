@@ -9,7 +9,7 @@ namespace App;
  * @copyright
  * @version
  */
-class Admin extends User
+class Admin extends AccountHolder
 {
 
 }

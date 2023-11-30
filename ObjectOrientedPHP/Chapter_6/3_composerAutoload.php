@@ -8,6 +8,6 @@ use Symfony\Component\VarDumper\VarDumper;
 //    "name" => 'Gary'
 //];
 
-$gary = new \App\User(5, 'Gary');
+$gary = new \App\AccountHolder(5, 'Gary');
 
 VarDumper::dump($gary);

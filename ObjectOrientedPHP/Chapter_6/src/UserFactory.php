@@ -5,9 +5,9 @@ namespace App;
 
 class UserFactory
 {
-    public static function create(int $id, string $name): User
+    public static function create(int $id, string $name): AccountHolder
     {
-        return new User($id, $name);
+        return new AccountHolder($id, $name);
     }
 
 }

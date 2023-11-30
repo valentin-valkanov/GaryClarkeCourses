@@ -1,5 +1,5 @@
 Class name: App\Admin
-Parent class name: App\User
+Parent class name: App\AccountHolder
 Interface names: App\AuthenticatedUserInterface
 Trait names: 
 Trait aliases: 

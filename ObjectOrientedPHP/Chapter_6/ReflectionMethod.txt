@@ -1,4 +1,4 @@
-Parent class short name: User
+Parent class short name: AccountHolder
 
 Parent class methods: 
 
