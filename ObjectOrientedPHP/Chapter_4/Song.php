@@ -11,7 +11,7 @@ require_once 'IdentifiableTraitImposter.php';
  * @copyright
  * @version
  */
-class SongChapter_4 implements IdentifiableChapter4
+class Song implements IdentifiableChapter4
 {
     use IdentifiableTrait;
     use IdentifiableTraitImposter{

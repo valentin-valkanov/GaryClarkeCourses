@@ -2,6 +2,6 @@
 
 interface SongHolder
 {
-    public function addSong(SongChapter_4 $song): void;
+    public function addSong(Song $song): void;
     public function getSongs(): array;
 }

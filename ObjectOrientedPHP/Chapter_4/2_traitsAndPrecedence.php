@@ -1,9 +1,9 @@
 <?php
 
-require_once 'SongChapter_4.php';
+require_once 'Song.php';
 
 
-$song = new SongChapter_4();
+$song = new Song();
 echo $song-> getId() . PHP_EOL;
 try {
     echo $song->getHexId() . PHP_EOL;

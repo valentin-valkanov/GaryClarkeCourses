@@ -1,7 +1,7 @@
 <?php
 
 require_once 'BookChapter_4.php';
-require_once 'SongChapter_4.php';
+require_once 'Song.php';
 
 $book = new BookChapter_4();
 try {
@@ -9,7 +9,7 @@ try {
 } catch (Exception $e) {
 }
 
-$song = new SongChapter_4();
+$song = new Song();
 try {
     echo $song->getHexId() . PHP_EOL;
 } catch (Exception $e) {
