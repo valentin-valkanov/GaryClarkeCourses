@@ -1,14 +1,6 @@
 <?php declare(strict_types=1);
 
 
-/**
- * Class JsonProductWriter
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
-
 require_once 'ProductWriter.php';
 class JsonProductWriter implements ProductWriter
 {

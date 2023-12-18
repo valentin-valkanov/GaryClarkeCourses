@@ -2,27 +2,20 @@
 
 require_once 'RateableChapter_5.php';
 
-/**
- * Class ProductChapter_5
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class ProductChapter_5
 {
     use RateableChapter_5;
 
-    public function __construct(private string $manufacturer,
-                                private string $itemName,
-                                private ProductWriter $productWriter)
+    public function __construct(private string        $manufacturer,
+                                private string        $itemName,
+                                private ProductWriter $productWriter) //Dependency Inversion principle
     {
     }
 
     public function __call(string $methodName, array $arguments)
     {
-        if(method_exists($this->productWriter, $methodName)){
-           return $this->productWriter->$methodName($this);
+        if (method_exists($this->productWriter, $methodName)) {
+            return $this->productWriter->$methodName($this);
         }
         return '';
     }
@@ -35,11 +28,12 @@ class ProductChapter_5
 
     public function __get(string $propertyName)
     {
-        $methodName = "get$propertyName";
+        $methodName = "get{$propertyName}";
 
-        if(method_exists($this, $methodName)){
-            return $this->$methodName();
+        if(!method_exists($this, $methodName)){
+            throw new Exception('Method does not exist');
         }
+        return $this->$methodName();
     }
 
     public function __set(string $propertyName, $value): void
@@ -47,7 +41,7 @@ class ProductChapter_5
         $methodName = 'set' . ucwords($propertyName);
 
             if(!method_exists($this, $methodName)){
-                throw new BadMethodCallException($methodName . ' does not exist');
+                throw new BadMethodCallException('Method ' . $methodName . ' does not exist');
             }
             $this->$methodName($value);
 
