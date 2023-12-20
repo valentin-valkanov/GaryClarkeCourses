@@ -22,7 +22,6 @@ class Song
     /**
      * @return string
      */
-    #[Pure]
     public function write(SongWriterInterface $writer): string
     {
         return $writer->write($this);

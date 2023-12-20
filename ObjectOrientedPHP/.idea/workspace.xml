@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ceef47-4c1f-43c7-86e7-b9d6e38202eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ObjectOrientedPHP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/5_lateStaticBinding.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/5_lateStaticBinding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/7_exceptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/7_exceptions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/Book2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Book2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/JasonFileReader.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/JasonFileReader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/Song2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Song2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_4/errors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/errors.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/1_getAndSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/1_getAndSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/4_call.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/4_call.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/HtmlBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/HtmlBlock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/JsonProductWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/JsonProductWriter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/Paragraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/Paragraph.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_5/ProductChapter_5.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/ProductChapter_5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_6/5_inspectingAttributes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_6/5_inspectingAttributes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_6/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_6/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/4_callables.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/4_callables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/5_anonymousClasses.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/5_anonymousClasses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/EmailNotifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/EmailNotifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/SmsNotifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/SmsNotifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/Song.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/Song.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHPFrameworkPRO" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702449368658</updated>
       <workItem from="1702449371571" duration="2809000" />
-      <workItem from="1702536350726" duration="36678000" />
+      <workItem from="1702536350726" duration="55116000" />
     </task>
     <servers />
   </component>

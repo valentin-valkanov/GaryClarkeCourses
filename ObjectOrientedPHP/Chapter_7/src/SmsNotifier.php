@@ -13,6 +13,6 @@ class SmsNotifier implements NotifierInterface
 {
     public function send($to): void
     {
-        echo 'Send SMS ' . $to . PHP_EOL;
+        echo 'Sending SMS to ' . $to . PHP_EOL;
     }
 }
