@@ -4,14 +4,7 @@ namespace App\controller;
 
 use GaryClarke\Framework\Http\Response;
 
-/**
- * Class PostController
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
-class PostController
+class PostsController
 {
     public function show(int $id): Response
     {

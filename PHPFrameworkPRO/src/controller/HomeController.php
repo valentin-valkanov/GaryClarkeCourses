@@ -4,13 +4,6 @@ namespace App\controller;
 
 use GaryClarke\Framework\Http\Response;
 
-/**
- * Class HomeController
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class HomeController
 {
     public function index(): Response

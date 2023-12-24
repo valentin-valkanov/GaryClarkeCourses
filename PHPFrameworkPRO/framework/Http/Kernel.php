@@ -2,58 +2,31 @@
 
 namespace GaryClarke\Framework\Http;
 
-use FastRoute\Dispatcher;
-use FastRoute\RouteCollector;
-use function FastRoute\simpleDispatcher;
+use GaryClarke\Framework\Routing\Router;
 
 class Kernel
 {
-    /*
-     * The handle() method itself contains the logic for routing using FastRoute and directly handles the request based on the matched route.
-     * It dispatches the request, identifies the appropriate handler function based on the URL and HTTP method, and executes that handler to generate a Response.
-     */
+    public function __construct(private Router $router)
+    {
+    }
+
     public function handle(Request $request): Response
     {
-        /*
-         * Create a dispatcher and dispatching the request
-         * After implementing some logic the dispatcher returns the response.
-         */
-        $dispatcher = simpleDispatcher(function (RouteCollector $routeCollector) {
-            $routes = include BASE_PATH . '/routes/web.php';
+        try{
 
-            foreach ($routes as $route) {
-                $routeCollector->addRoute(...$route);
-            }
-//            $routeCollector->addRoute('GET', '/', function() {          //defining a route (routing), the callable simulates a handler (handling)
-//                $content = '<h1>Hello World</h1>';                                      //here in the callback body (handler) should be implemented some logic
-//
-//                return new Response($content);
-//            });
-//
-//            $routeCollector->addRoute('GET', '/posts/{id:\d+}', function($routeParams) {
-//                $content = "<h1>This is Post {$routeParams['id']}</h1>";
-//
-//                return new Response($content);
-//            });
-        });
+            [$routHandler, $vars] = $this->router->dispatch($request);
 
-        /*
-         * Dispatch a URI, to obtain the route info for the current request.
-         */
-        $routeInfo = $dispatcher->dispatch(
-            $request->getMethod(),
-            $request->getPathInfo()
+            $response = call_user_func_array($routHandler, $vars);
 
-        );
+        } catch (HttpException $exception){
 
-        [$status, [$controller, $method], $vars] = $routeInfo;
+            $response = new Response($exception->getMessage(), $exception->getStatusCode());
+        }catch (\Exception $exception){
 
-
-        /*
-         * Call the handler, provided by the route info, in order to create a Response
-         */
-        $response = call_user_func_array([new $controller, $method], $vars);
+            $response = new Response($exception->getMessage(), 500);
+        }
 
         return $response;
-    }
+
+        }
 }
