@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ceef47-4c1f-43c7-86e7-b9d6e38202eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/HttpException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/HttpRequestMethodException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Routing/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Routing/RouterInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_6/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_6/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter_8/src/MySQL/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_8/src/MySQL/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/PostsController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PHPFrameworkPRO" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -72,7 +59,8 @@
       <workItem from="1702449371571" duration="2809000" />
       <workItem from="1702536350726" duration="55116000" />
       <workItem from="1703332793818" duration="1624000" />
-      <workItem from="1703334859679" duration="12144000" />
+      <workItem from="1703334859679" duration="13539000" />
+      <workItem from="1703585688787" duration="610000" />
     </task>
     <servers />
   </component>
