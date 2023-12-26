@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ceef47-4c1f-43c7-86e7-b9d6e38202eb" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/ObjectOrientedPHP.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
@@ -46,6 +47,11 @@
       <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Response.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Request.php" afterDir="false" />
+>>>>>>> RoutingAndControllers
       <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,5 +117,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

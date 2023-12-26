@@ -1,10 +1,10 @@
-<?php declare(strict_types=1);
-
+<?php
 
 namespace GaryClarke\Framework\Http;
 
 class Request
 {
+
     public function __construct(
         public readonly array $getParams,
         public readonly array $postParams,
@@ -20,7 +20,7 @@ class Request
         return new static($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
     }
 
-    public function getPathInfo() :string
+    public function getPathInfo(): string
     {
         return strtok($this->server['REQUEST_URI'], '?');
     }
