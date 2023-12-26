@@ -3,7 +3,7 @@
 require_once 'JasonFileReader.php';
 
 try {
-    $filePointer = fopen('errors.txt', 'a+');
+    $filePointer = fopen('errors.txt', 'ab+');
     fwrite($filePointer, 'Starting...');
 
     $reader = new JasonFileReader();

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24ceef47-4c1f-43c7-86e7-b9d6e38202eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ObjectOrientedPHP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/HttpException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/HttpRequestMethodException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Routing/Router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Routing/RouterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/5_lateStaticBinding.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/5_lateStaticBinding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/7_exceptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/7_exceptions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/Book2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Book2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/JasonFileReader.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/JasonFileReader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/Song2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/Song2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_4/errors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_4/errors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/1_getAndSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/1_getAndSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/4_call.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/4_call.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/HtmlBlock.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/HtmlBlock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/JsonProductWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/JsonProductWriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/Paragraph.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/Paragraph.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_5/ProductChapter_5.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_5/ProductChapter_5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_6/5_inspectingAttributes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_6/5_inspectingAttributes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_6/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_6/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/4_callables.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/4_callables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/5_anonymousClasses.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/5_anonymousClasses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/EmailNotifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/EmailNotifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/SmsNotifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/SmsNotifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_7/src/Song.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_7/src/Song.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter_8/src/MySQL/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter_8/src/MySQL/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/src/controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/framework/src/Http/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PHPFrameworkPRO/public/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/Chapter_6/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="76a23916-c3db-4689-8f1b-bc8cb62078a1" value="Orange" />
+    </colors>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/Chapter_6/vendor/composer" />
+      <path value="$PROJECT_DIR$/Chapter_6/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/Chapter_6/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Chapter_6/vendor/symfony/var-dumper" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2ZTc91u8lQES8LXfMVKPIKbguUm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24ceef47-4c1f-43c7-86e7-b9d6e38202eb" name="Changes" comment="" />
+      <created>1702449368658</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702449368658</updated>
+      <workItem from="1702449371571" duration="2809000" />
+      <workItem from="1702536350726" duration="55116000" />
+      <workItem from="1703332793818" duration="1624000" />
+      <workItem from="1703334859679" duration="13539000" />
+      <workItem from="1703585688787" duration="610000" />
+      <workItem from="1703595137444" duration="679000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

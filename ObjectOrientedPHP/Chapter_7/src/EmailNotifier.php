@@ -13,6 +13,6 @@ class EmailNotifier implements NotifierInterface
 {
     public function send($to): void
     {
-        echo 'Send email ' . $to . PHP_EOL;
+        echo 'Sending email to ' . $to . PHP_EOL;
     }
 }

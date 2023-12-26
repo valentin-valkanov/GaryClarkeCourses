@@ -20,7 +20,7 @@ class JasonFileReader
             throw new FileNotFoundException('File could not be found');
         }
         $content = file_get_contents($filename);
-        $items = json_decode($content, true, JSON_THROW_ON_ERROR, JSON_THROW_ON_ERROR);
+        $items = json_decode(json: $content, associative: true, flags: JSON_THROW_ON_ERROR);
 
         return $items;
     }

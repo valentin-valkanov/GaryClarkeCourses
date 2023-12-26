@@ -1,10 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace GaryClarke\Framework\Http;
+namespace App\controller;
 
-class Kernel
+use GaryClarke\Framework\Http\Response;
+
+class HomeController
 {
-    public function handle(Request $request): Response
+    public function index(): Response
     {
         $content = '<h1>Hello World</h1>';
         return new Response($content);

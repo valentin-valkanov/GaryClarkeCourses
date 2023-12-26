@@ -5,13 +5,6 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Exception\ORMException;
 use Doctrine\ORM\ORMSetup;
 
-/**
- * Class Connection
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Connection
 {
     private static ?self $instance = null;
@@ -35,9 +28,6 @@ class Connection
         $this->entityManager = EntityManager::create($connection, $config);
     }
 
-    /**
-     * @return Connection
-     */
     public static function getInstance(): self
     {
         if(self::$instance === null){
@@ -46,9 +36,6 @@ class Connection
         return self::$instance;
     }
 
-    /**
-     * @return EntityManager
-     */
     public function getEntityManager(): EntityManager
     {
         return $this->entityManager;

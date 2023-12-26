@@ -6,7 +6,7 @@ require_once 'vendor/autoload.php';
 //    echo 'Sending confirmation to ' . $order->getOrderer() . PHP_EOL;
 //};
 
-$listener = static fn($order) => print 'Sending confirmation to ' . $order->getOrderer() . PHP_EOL;
+$listener = fn($order) => print 'Sending confirmation to ' . $order->getOrderer() . PHP_EOL;
 
 $order = new \App\Order();
 
