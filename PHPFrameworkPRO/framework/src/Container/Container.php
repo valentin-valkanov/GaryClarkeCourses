@@ -2,6 +2,7 @@
 
 namespace GaryClarke\Framework\Container;
 use GaryClarke\Framework\Tests\DependantClass;
+use PHPUnit\Logging\Exception;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
@@ -19,6 +20,12 @@ class Container implements ContainerInterface
 
     public function add(string $id, string|object $concrete = null)
     {
+        if(null === $concrete){
+            if(!class_exists($id)){
+                throw new ContainerException("service $id could not be found");
+            }
+            $concrete = $id;
+        }
         $this->services[$id] = $concrete;
     }
     public function get(string $id)

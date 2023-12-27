@@ -2,6 +2,7 @@
 namespace GaryClarke\Framework\Tests;
 
 use GaryClarke\Framework\Container\Container;
+use GaryClarke\Framework\Container\ContainerException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -25,5 +26,17 @@ class ContainerTest extends TestCase
 
         //Make assertions
         $this->assertInstanceOf(DependantClass::class, $container->get('dependant-class'));
+    }
+    /** @test  */
+    public function a_ContainerException_is_thrown_if_a_serice_cannot_be_found()
+    {
+        //Setup
+        $container = new Container();
+
+        //Expect exception
+        $this->expectException(ContainerException::class);
+
+        //Do something
+        $container->add('foobar');
     }
 }
