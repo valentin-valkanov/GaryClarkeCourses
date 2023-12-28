@@ -27,6 +27,20 @@ class ContainerTest extends TestCase
         //Make assertions
         $this->assertInstanceOf(DependantClass::class, $container->get('dependant-class'));
     }
+
+    /** @test */
+    public function the_container_has_a_service()
+    {
+        //Setup
+        $container = new Container();
+
+        //Do something
+        $container->add('dependant-class', DependantClass::class);
+
+        //Make assertion
+        $this->assertTrue($container->has('dependant-class'));
+        $this->assertFalse($container->has('not-existing-class'));
+    }
     /** @test  */
     public function a_ContainerException_is_thrown_if_a_serice_cannot_be_found()
     {
@@ -39,4 +53,5 @@ class ContainerTest extends TestCase
         //Do something
         $container->add('foobar');
     }
+
 }
