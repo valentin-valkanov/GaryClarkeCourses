@@ -11,5 +11,17 @@ namespace GaryClarke\Framework\Tests;
  */
 class DependantClass
 {
+    public function __construct(private DependencyClass $dependency)
+    {
+    }
+
+    /**
+     * @return DependencyClass
+     */
+    public function getDependency(): DependencyClass
+    {
+        return $this->dependency;
+    }
+
 
 }
