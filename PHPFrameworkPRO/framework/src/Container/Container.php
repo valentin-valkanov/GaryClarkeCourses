@@ -58,13 +58,35 @@ class Container implements ContainerInterface
         $constructorParams = $constructor->getParameters();
 
         // 5. Obtain dependencies
-        $classDependencies = resolveClassDependencies($constructorParams);
+        $classDependencies = $this->resolveClassDependencies($constructorParams);
 
         // 6. Instantiate with dependencies
         $service = $reflectionClass->newInstanceArgs($classDependencies);
 
         // 7. Return the object
         return $service;
+    }
+
+    private function resolveClassDependencies(array $reflectionParameters): array
+    {
+        // 1. Initialize empty dependencies array (required by newInstanceArgs)
+        $classDependencies = [];
+
+        // 2. Try to locate and instantiate each parameter
+        /** @var \ReflectionParameter $parameter */
+        foreach ($reflectionParameters as $parameter){
+
+            // Get the parameter's ReflectionNamedType as $serviceType
+            $serviceType = $parameter->getType();
+
+            // Try to instantiate using $serviceType's name
+            $service = $this->get($serviceType->getName());
+
+            // Add the service to the classDependencies array
+            $classDependencies[] = $service;
+        }
+        // 3. Return the classDependencies array
+        return $classDependencies;
     }
 
     public function has(string $id): bool
