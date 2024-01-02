@@ -3,30 +3,28 @@
 namespace GaryClarke\Framework\Http;
 
 use GaryClarke\Framework\Routing\Router;
+use GaryClarke\Framework\Routing\RouterInterface;
 
 class Kernel
 {
-    public function __construct(private Router $router)
+    public function __construct(private RouterInterface $router)
     {
     }
 
     public function handle(Request $request): Response
     {
-        try{
+        try {
 
-            [$routHandler, $vars] = $this->router->dispatch($request);
+            [$routeHandler, $vars] = $this->router->dispatch($request);
 
-            $response = call_user_func_array($routHandler, $vars);
+            $response = call_user_func_array($routeHandler, $vars);
 
-        } catch (HttpException $exception){
-
+        } catch (HttpException $exception) {
             $response = new Response($exception->getMessage(), $exception->getStatusCode());
-        }catch (\Exception $exception){
-
+        } catch (\Exception $exception) {
             $response = new Response($exception->getMessage(), 500);
         }
 
         return $response;
-
-        }
+    }
 }
