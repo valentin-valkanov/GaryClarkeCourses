@@ -12,6 +12,7 @@ use function FastRoute\simpleDispatcher;
 
 class Router implements RouterInterface
 {
+    private array $routes;
 
     public function dispatch(Request $request): array
     {
@@ -27,13 +28,18 @@ class Router implements RouterInterface
         return [$handler, $vars];
     }
 
+    public function setRoutes(array $routes): void
+    {
+        $this->routes = $routes;
+
+    }
+
     private function extractRouteInfo(Request $request): array
     {
         //Create a dispatcher. The dispatcher holds all routes.
         $dispatcher = simpleDispatcher(function (RouteCollector $routeCollector) {
-            $routes = include BASE_PATH . '/routes/web.php';
 
-            foreach ($routes as $route) {
+            foreach ($this->routes as $route) {
                 $routeCollector->addRoute(...$route);
             }
         });
