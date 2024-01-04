@@ -6,7 +6,7 @@ $container->delegate(new \League\Container\ReflectionContainer(true));
 
 # parameters for application config
 $routes = include BASE_PATH . '/routes/web.php';
-$appEnv = 'prod';
+$appEnv = 'dev';
 
 $container->add('APP_ENV', new \League\Container\Argument\Literal\StringArgument($appEnv));
 
