@@ -22,8 +22,6 @@ class Kernel
     {
         try {
 
-            throw new \Exception('Kernel exception');
-
             [$routeHandler, $vars] = $this->router->dispatch($request, $this->container);
 
             $response = call_user_func_array($routeHandler, $vars);
