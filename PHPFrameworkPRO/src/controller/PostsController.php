@@ -2,13 +2,15 @@
 
 namespace App\controller;
 
+use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\Response;
 
-class PostsController
+class PostsController extends AbstractController
 {
     public function show(int $id): Response
     {
-        $content = "<h1>This is Post {$id}</h1>";
-        return new Response($content);
+        return $this->render('posts.html.twig', [
+            'postId' => $id
+        ]);
     }
 }
