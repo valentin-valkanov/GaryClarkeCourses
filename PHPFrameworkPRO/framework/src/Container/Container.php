@@ -42,15 +42,15 @@ class Container implements ContainerInterface
         return $object;
     }
 
-    private function resolve($class): object
+    private function resolve($class): object //$class is services[$id]. It is an object|name of the class
     {
-        // 1. Instantiate a Reflection class (dump and check)
+        // 1. Instantiate a Reflection class (dump and check). It reflects $class.
         $reflectionClass = new \ReflectionClass($class);
 
         // 2. Use Reflection to try to obtain a class constructor
         $constructor = $reflectionClass->getConstructor();
 
-        // 3. If there is no constructor, simply instantiate
+        // 3. If there is no constructor, simply instantiate. It means there is no dependencies
         if(null === $constructor){
             return $reflectionClass->newInstance();
         }
