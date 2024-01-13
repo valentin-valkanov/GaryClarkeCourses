@@ -76,10 +76,10 @@ class Container implements ContainerInterface
         /** @var \ReflectionParameter $parameter */
         foreach ($reflectionParameters as $parameter){
 
-            // Get the parameter's ReflectionNamedType as $serviceType
+            // Get the parameter's ReflectionNamedType as $serviceType.Obtain the type hint of the parameter
             $serviceType = $parameter->getType();
 
-            // Try to instantiate using $serviceType's name
+            // Try to instantiate using $serviceType's name.It is doing it recursively using get method
             $service = $this->get($serviceType->getName());
 
             // Add the service to the classDependencies array
