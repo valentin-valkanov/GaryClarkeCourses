@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 $dotenv = new \Symfony\Component\Dotenv\Dotenv();
 $container = new \League\Container\Container();
