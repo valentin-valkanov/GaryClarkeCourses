@@ -1,0 +1,3 @@
+This is git 2
+A change for commit
+A remote change
