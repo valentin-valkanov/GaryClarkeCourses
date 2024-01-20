@@ -16,7 +16,6 @@ class Response
         //So best to create to instantiation like here
         http_response_code($this->status);
     }
-
     public function send():void
     {
         echo $this->content;
@@ -26,6 +25,4 @@ class Response
     {
         $this->content = $content;
     }
-
-
 }

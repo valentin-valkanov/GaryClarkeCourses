@@ -16,6 +16,4 @@ class HttpException extends \Exception
     {
         $this->statusCode = $statusCode;
     }
-
-
 }
