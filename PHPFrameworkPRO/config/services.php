@@ -1,9 +1,8 @@
 <?php
-declare(strict_types=1);
-
 $dotenv = new \Symfony\Component\Dotenv\Dotenv();
-$container = new \League\Container\Container();
 $dotenv->load(BASE_PATH . '/.env');
+
+$container = new \League\Container\Container();
 
 $container->delegate(new \League\Container\ReflectionContainer(true));
 
@@ -16,19 +15,23 @@ $container->add('APP_ENV', new \League\Container\Argument\Literal\StringArgument
 $databaseUrl = 'sqlite:///' . BASE_PATH . '/var/db.sqlite';
 
 # services
+
 $container->add(
     GaryClarke\Framework\Routing\RouterInterface::class,
     GaryClarke\Framework\Routing\Router::class
 );
 
-$container->extend(\GaryClarke\Framework\Routing\RouterInterface::class)
-    ->addMethodCall('setRoutes', [new \League\Container\Argument\Literal\ArrayArgument($routes)]);
+$container->extend(GaryClarke\Framework\Routing\RouterInterface::class)
+    ->addMethodCall(
+        'setRoutes',
+        [new \League\Container\Argument\Literal\ArrayArgument($routes)]
+    );
 
 $container->add(GaryClarke\Framework\Http\Kernel::class)
     ->addArgument(GaryClarke\Framework\Routing\RouterInterface::class)
     ->addArgument($container);
 
-$container->addShared('filesystem-loader',\Twig\Loader\FilesystemLoader::class)
+$container->addShared('filesystem-loader', \Twig\Loader\FilesystemLoader::class)
     ->addArgument(new \League\Container\Argument\Literal\StringArgument($templatesPath));
 
 $container->addShared('twig', \Twig\Environment::class)
@@ -44,8 +47,9 @@ $container->add(\GaryClarke\Framework\Dbal\ConnectionFactory::class)
         new \League\Container\Argument\Literal\StringArgument($databaseUrl)
     ]);
 
-$container->addShared(\Doctrine\DBAL\Connection::class, function () use ($container):\Doctrine\DBAL\Connection {
+$container->addShared(\Doctrine\DBAL\Connection::class, function () use ($container): \Doctrine\DBAL\Connection {
     return $container->get(\GaryClarke\Framework\Dbal\ConnectionFactory::class)->create();
 });
+
 
 return $container;

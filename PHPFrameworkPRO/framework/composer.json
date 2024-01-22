@@ -32,5 +32,6 @@
     "symfony/dotenv": "^6.0",
     "twig/twig": "^3.0",
     "doctrine/dbal": "3.6"
+
   }
 }

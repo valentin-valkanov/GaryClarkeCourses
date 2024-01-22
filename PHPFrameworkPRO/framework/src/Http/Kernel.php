@@ -3,7 +3,6 @@
 namespace GaryClarke\Framework\Http;
 
 use Doctrine\DBAL\Connection;
-use GaryClarke\Framework\Dbal\ConnectionFactory;
 use GaryClarke\Framework\Routing\Router;
 use GaryClarke\Framework\Routing\RouterInterface;
 use Psr\Container\ContainerInterface;
@@ -22,9 +21,9 @@ class Kernel
 
     public function handle(Request $request): Response
     {
-        dd($this->container->get(Connection::class));
         try {
-//            dd($this->container->get(Connection::class));
+
+            dd($this->container->get(Connection::class));
 
             [$routeHandler, $vars] = $this->router->dispatch($request, $this->container);
 
@@ -39,14 +38,14 @@ class Kernel
 
     /**
      * @throws  \Exception $exception
-     * @return Response
      */
-    private function createExceptionResponse(\Exception $exception):Response
+    private function createExceptionResponse(\Exception $exception): Response
     {
-        if(in_array($this->appEnv, ['dev', 'test'])){
+        if (in_array($this->appEnv, ['dev', 'test'])) {
             throw $exception;
         }
-        if($exception instanceof HttpException){
+
+        if ($exception instanceof HttpException) {
             return new Response($exception->getMessage(), $exception->getStatusCode());
         }
 
