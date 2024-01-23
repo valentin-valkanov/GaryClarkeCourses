@@ -1,5 +1,5 @@
 #!/usr/bin/env php
-<?php // bin/console
+<?php
 
 // set a base path
 define('BASE_PATH', dirname(__DIR__));
