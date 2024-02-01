@@ -21,14 +21,8 @@ final class Kernel
         // Register commands with the container
         $this->registerCommands();
 
-
         // Run the console application, returning a status code
         $status = $this->application->run();
-
-//        dump($this->container->has(MigrateDatabase::class));
-//
-//        $command = $this->container->get(MigrateDatabase::class);
-//        dump($command);
 
         // return the status code
         return $status;
@@ -48,14 +42,8 @@ final class Kernel
                 continue;
             }
 
-//            if ($commandFile->getFilename() == 'CommandInterface.php') continue; //this should be redacted.
-
-            // dump($commandFile);
             // Get the Command class name. Using psr4 this will be same as filename
             $command = $namespace.pathinfo($commandFile, PATHINFO_FILENAME);
-
-
-
 
             // If it is a subclass of CommandInterface
             if (is_subclass_of($command, CommandInterface::class)) {
@@ -64,8 +52,6 @@ final class Kernel
                 $this->container->add($commandName, $command);
             }
         }
-
-
         // === Register all user-defined commands (@todo) ===
     }
 }
