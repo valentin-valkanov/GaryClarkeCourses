@@ -1,59 +1,57 @@
 <?php declare(strict_types=1);
 
 namespace GaryClarke\Framework\Container;
+
 use GaryClarke\Framework\Tests\DependantClass;
-use PHPUnit\Logging\Exception;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
-/**
- * Class Container
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Container implements ContainerInterface
 {
     private array $services = [];
 
     public function add(string $id, string|object $concrete = null)
     {
-        if(null === $concrete){
-            if(!class_exists($id)){
-                throw new ContainerException("service $id could not be added");
+        if (null === $concrete) {
+            if (!class_exists($id)) {
+                throw new ContainerException("Service $id could not be added");
             }
+
             $concrete = $id;
         }
+
         $this->services[$id] = $concrete;
     }
+
     public function get(string $id)
     {
-        if(!$this->has($id)) {
-            if(!class_exists($id)) {
-                throw new ContainerException("service $id could not be resolved");
+        if (!$this->has($id)) {
+            if (!class_exists($id)) {
+                throw new ContainerException("Service $id could not be resolved");
             }
 
             $this->add($id);
         }
 
         $object = $this->resolve($this->services[$id]);
+
         return $object;
     }
 
-    private function resolve($class): object //$class is services[$id]. It is an object|name of the class
+    private function resolve($class): object
     {
-        // 1. Instantiate a Reflection class (dump and check). It reflects $class.
+        // 1. Instantiate a Reflection class (dump and check)
         $reflectionClass = new \ReflectionClass($class);
 
         // 2. Use Reflection to try to obtain a class constructor
         $constructor = $reflectionClass->getConstructor();
 
-        // 3. If there is no constructor, simply instantiate. It means there is no dependencies
-        if(null === $constructor){
+        // 3. If there is no constructor, simply instantiate
+        if (null === $constructor) {
             return $reflectionClass->newInstance();
         }
+
         // 4. Get the constructor parameters
         $constructorParams = $constructor->getParameters();
 
@@ -74,17 +72,18 @@ class Container implements ContainerInterface
 
         // 2. Try to locate and instantiate each parameter
         /** @var \ReflectionParameter $parameter */
-        foreach ($reflectionParameters as $parameter){
+        foreach ($reflectionParameters as $parameter) {
 
-            // Get the parameter's ReflectionNamedType as $serviceType.Obtain the type hint of the parameter
+            // Get the parameter's ReflectionNamedType as $serviceType
             $serviceType = $parameter->getType();
 
-            // Try to instantiate using $serviceType's name.It is doing it recursively using get method
+            // Try to instantiate using $serviceType's name
             $service = $this->get($serviceType->getName());
 
             // Add the service to the classDependencies array
             $classDependencies[] = $service;
         }
+
         // 3. Return the classDependencies array
         return $classDependencies;
     }

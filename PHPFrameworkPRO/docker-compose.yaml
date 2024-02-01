@@ -5,7 +5,7 @@ services:
     volumes:
       - ./public:/var/www/html/public
     ports:
-      - "80:80"
+      - "8085:80"
   # application
   app:
     image: garyclarke/php-framework-app
