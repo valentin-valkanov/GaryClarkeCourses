@@ -16,10 +16,16 @@ class MigrateDatabase implements CommandInterface
 
     public function execute(array $params = []): int
     {
+        try {
         // Create a migrations table SQL if table not already in existence
         $this->createMigrationsTable();
 
+        $this->connection->beginTransaction();
+
         // Get $appliedMigrations which are already in the database.migrations table
+        $appliedMigrations = $this->getAppliedMigrations();
+
+        dd($appliedMigrations);
 
         // Get the $migrationFiles from the migrations folder
 
@@ -31,9 +37,24 @@ class MigrateDatabase implements CommandInterface
 
         // Execute the SQL query
 
+        $this->connection->commit();
+
         return 0;
+
+        }catch (\Throwable $throwable){
+            $this->connection->rollBack();
+            throw $throwable;
+        }
     }
 
+    private function getAppliedMigrations(): array
+    {
+        $sql = "SELECT migration FROM migrations";
+
+        $appliedMigrations = $this->connection->executeQuery($sql)->fetchFirstColumn();
+
+        return $appliedMigrations;
+    }
     private function createMigrationsTable(): void
     {
         $schemaManager = $this->connection->createSchemaManager();
