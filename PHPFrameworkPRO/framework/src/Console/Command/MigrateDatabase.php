@@ -51,10 +51,11 @@ class MigrateDatabase implements CommandInterface
         }
         // Create SQL for any migrations which have not been run .i.e. which are not in the database
 
-
-
-
         // Execute the SQL query
+        $sqlArray = $schema->toSql($this->connection->getDatabasePlatform());
+        foreach ($sqlArray as $sql){
+            $this->connection->executeQuery($sql);
+        }
 
         $this->connection->commit();
 
