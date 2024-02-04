@@ -47,6 +47,7 @@ class MigrateDatabase implements CommandInterface
 
 
             // Add migration to database
+            $this->insertMigration($migration);
         }
         // Create SQL for any migrations which have not been run .i.e. which are not in the database
 
@@ -63,6 +64,14 @@ class MigrateDatabase implements CommandInterface
             $this->connection->rollBack();
             throw $throwable;
         }
+    }
+
+    private function insertMigration(string $migration): void
+    {
+        $sql = "INSERT INTO migrations (migration) VALUES (?)";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->bindValue(1, $migration);
+        $stmt->executeStatement();
     }
 
     private function getMigrationFiles(): array
