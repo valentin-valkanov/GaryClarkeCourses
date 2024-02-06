@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\controller;
+namespace App\Controller;
 
 use App\Widget;
 use GaryClarke\Framework\Controller\AbstractController;

@@ -1,7 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace App\controller;
+namespace App\Controller;
 
+use App\Entity\Post;
 use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
@@ -22,6 +23,10 @@ class PostsController extends AbstractController
 
     public function store(): void
     {
-        dd($this->request->postParams);
+        $tittle = $this->request->postParams['title'];
+        $body = $this->request->postParams['body'];
+
+        $post = Post::create($tittle, $body);
+        dd($post);
     }
 }

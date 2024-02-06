@@ -1,7 +1,7 @@
 <?php
 
-use App\controller\HomeController;
-use App\controller\PostsController;
+use App\Controller\HomeController;
+use App\Controller\PostsController;
 use GaryClarke\Framework\Http\Response;
 
 return [
