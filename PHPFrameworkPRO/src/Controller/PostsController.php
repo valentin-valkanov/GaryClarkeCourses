@@ -3,12 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Repository\PostMapper;
 use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 
 class PostsController extends AbstractController
 {
+    public function __construct(private PostMapper $postMapper)
+    {
+    }
+
     public function show(int $id): Response
     {
         return $this->render('post.html.twig', [
@@ -23,10 +28,13 @@ class PostsController extends AbstractController
 
     public function store(): void
     {
-        $tittle = $this->request->postParams['title'];
+        $title = $this->request->postParams['title'];
         $body = $this->request->postParams['body'];
 
-        $post = Post::create($tittle, $body);
+        $post = Post::create($title, $body);
+
+        $this->postMapper->save($post);
+
         dd($post);
     }
 }
