@@ -5,6 +5,7 @@ namespace App\Repository;
 
 use App\Entity\Post;
 use Doctrine\DBAL\Connection;
+use GaryClarke\Framework\Http\NotFoundException;
 
 class PostRepository
 {
@@ -37,6 +38,15 @@ class PostRepository
             createdAt: new \DateTimeImmutable($row['created_at'])
         );
 
+        return $post;
+    }
+
+    public function findOrFail(int $id): Post
+    {
+        $post = $this->findByiD($id);
+        if(!$post){
+            throw new NotFoundException(sprintf('Post with ID %d not found', $id));
+        }
         return $post;
     }
 }
