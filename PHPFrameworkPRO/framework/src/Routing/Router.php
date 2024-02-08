@@ -25,6 +25,7 @@ class Router implements RouterInterface
         if(is_array($handler)) {
             [$controllerId, $method] = $handler;
             $controller = $container->get($controllerId);
+
             if(is_subclass_of($controller, AbstractController::class)){
                 $controller->setRequest($request);
             }

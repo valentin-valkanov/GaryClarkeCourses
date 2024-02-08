@@ -42,7 +42,7 @@ class MigrateDatabase implements CommandInterface
             // Require the object
             $migrationObject = require $this->migrationsPath . '/' . $migration;
 
-            // Call up method
+            // Call up methodgit
             $migrationObject->up($schema);
 
 
