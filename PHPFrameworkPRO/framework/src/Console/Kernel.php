@@ -49,9 +49,11 @@ final class Kernel
             if (is_subclass_of($command, CommandInterface::class)) {
                 // Add to the container, using the name as the ID e.g. $container->add('database:migrations:migrate', MigrateDatabase::class)
                 $commandName = (new \ReflectionClass($command))->getProperty('name')->getDefaultValue();
+
                 $this->container->add($commandName, $command);
             }
         }
+
         // === Register all user-defined commands (@todo) ===
     }
 }

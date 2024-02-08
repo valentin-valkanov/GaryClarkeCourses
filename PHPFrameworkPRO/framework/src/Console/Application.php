@@ -44,10 +44,8 @@ class Application
                 //This is an option
                 $option = explode('=', substr($arg, 2));
                 $options[$option[0]] = $option[1] ?? true;
-
             }
         }
         return $options;
     }
-
 }
