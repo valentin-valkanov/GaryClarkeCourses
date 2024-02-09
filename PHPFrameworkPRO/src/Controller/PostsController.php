@@ -6,6 +6,7 @@ use App\Entity\Post;
 use App\Repository\PostMapper;
 use App\Repository\PostRepository;
 use GaryClarke\Framework\Controller\AbstractController;
+use GaryClarke\Framework\Http\RedirectResponse;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 
@@ -32,7 +33,7 @@ class PostsController extends AbstractController
         return $this->render('create-post.html.twig');
     }
 
-    public function store(): void
+    public function store(): Response
     {
         $title = $this->request->postParams['title'];
         $body = $this->request->postParams['body'];
@@ -40,5 +41,7 @@ class PostsController extends AbstractController
         $post = Post::create($title, $body);
 
         $this->postMapper->save($post);
+
+        return new RedirectResponse('/posts');
     }
 }
