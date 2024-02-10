@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 namespace App\Entity;
 
@@ -19,6 +20,7 @@ class Post
         ?int $id = null,
         ?\DateTimeImmutable $createdAt = null
     ): Post
+
     {
         return new self($id, $title, $body, $createdAt ?? new \DateTimeImmutable());
     }
