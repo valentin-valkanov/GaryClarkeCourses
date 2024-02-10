@@ -2,13 +2,6 @@
 
 namespace GaryClarke\Framework\Session;
 
-/**
- * Class Session
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Session implements SessionInterface
 {
     private const FLASH_KEY = 'flash';
