@@ -5,16 +5,9 @@ namespace GaryClarke\Framework\Http\Middleware;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 
-/**
- * Class Authenticate
- *
- * @author Valentin Valkanov <valentinvalkanof@gmail.com>
- * @copyright
- * @version
- */
 class Authenticate implements MiddleWareInterface
 {
-    private bool $authenticated = true;
+    private bool $authenticated = false;
     public function process(Request $request, RequestHandlerInterface $requestHandler): Response
     {
         if(!$this->authenticated){
