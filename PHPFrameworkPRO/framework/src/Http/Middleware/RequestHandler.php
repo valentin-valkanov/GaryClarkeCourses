@@ -4,6 +4,7 @@ namespace GaryClarke\Framework\Http\Middleware;
 
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
+use Psr\Container\ContainerInterface;
 
 class RequestHandler implements RequestHandlerInterface
 {
@@ -11,6 +12,11 @@ class RequestHandler implements RequestHandlerInterface
         Authenticate::class,
         Success::class
     ];
+
+    public function __construct(private ContainerInterface $container)
+    {
+    }
+
     public function handle(Request $request): Response
     {
         // If there are no middleware classes to execute, return a default response
@@ -21,9 +27,10 @@ class RequestHandler implements RequestHandlerInterface
 
         // Get the next middleware class to execute
         $middlewareClass = array_shift($this->middleware);
+        $middleware = $this->container->get($middlewareClass);
 
         // Create a new instance of the middleware call process on it
-        $response = (new $middlewareClass())->process($request, $this);
+        $response = $middleware->process($request, $this);
 
         return $response;
     }
