@@ -1,5 +1,7 @@
 <?php
 
+use GaryClarke\Framework\Routing\RouterInterface;
+
 $dotenv = new \Symfony\Component\Dotenv\Dotenv();
 $dotenv->load(BASE_PATH . '/.env');
 
@@ -86,5 +88,11 @@ $container->add(
     \Doctrine\DBAL\Connection::class,
     new \League\Container\Argument\Literal\StringArgument(BASE_PATH . '/migrations')
 ]);
+
+$container->add(\GaryClarke\Framework\Http\Middleware\RouterDispatch::class)
+    ->addArguments([
+        \GaryClarke\Framework\Routing\RouterInterface::class,
+        $container
+    ]);
 
 return $container;

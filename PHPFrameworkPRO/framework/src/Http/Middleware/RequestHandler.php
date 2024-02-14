@@ -4,13 +4,14 @@ namespace GaryClarke\Framework\Http\Middleware;
 
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
+use GaryClarke\Framework\Routing\RouterInterface;
 use Psr\Container\ContainerInterface;
 
 class RequestHandler implements RequestHandlerInterface
 {
     private array $middleware = [
         Authenticate::class,
-        Success::class
+        RouterDispatch::class
     ];
 
     public function __construct(private ContainerInterface $container)
