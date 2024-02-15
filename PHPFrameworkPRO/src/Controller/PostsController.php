@@ -16,7 +16,7 @@ class PostsController extends AbstractController
     public function __construct(
         private PostMapper $postMapper,
         private PostRepository $postRepository,
-        private SessionInterface $session
+
     )
     {
     }
@@ -44,7 +44,10 @@ class PostsController extends AbstractController
 
         $this->postMapper->save($post);
 
-        $this->session->setFlash('success', sprintf('Post "%s" successfully created', $title));
+        $this->request->getSession()->setFlash(
+            'success',
+            sprintf('Post "%s" successfully created', $title)
+        );
 
         return new RedirectResponse('/posts');
     }
