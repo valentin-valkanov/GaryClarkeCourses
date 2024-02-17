@@ -4,7 +4,6 @@ namespace GaryClarke\Framework\Http\Middleware;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 use GaryClarke\Framework\Session\SessionInterface;
-use mysql_xdevapi\Session;
 
 class StartSession implements MiddleWareInterface
 {

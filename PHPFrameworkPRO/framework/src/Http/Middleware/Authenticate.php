@@ -16,5 +16,4 @@ class Authenticate implements MiddleWareInterface
 
         return $requestHandler->handle($request);
     }
-
 }
