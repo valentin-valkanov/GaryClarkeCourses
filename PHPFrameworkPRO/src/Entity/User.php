@@ -13,7 +13,7 @@ class User
     {
     }
 
-    public static function create(string $username, string $plainPassword)
+    public static function create(string $username, string $plainPassword): self
     {
         return new self(
             null,
