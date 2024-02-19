@@ -6,7 +6,6 @@ use App\Form\User\RegistrationForm;
 use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\RedirectResponse;
 use GaryClarke\Framework\Http\Response;
-use function mysql_xdevapi\getSession;
 
 class RegistrationController extends AbstractController
 {
@@ -36,9 +35,8 @@ class RegistrationController extends AbstractController
 
             return new RedirectResponse('register');
         }
-
-
         // register the user by calling $form->save()
+        $user = $form->save();
 
         // Add a session success message
 
