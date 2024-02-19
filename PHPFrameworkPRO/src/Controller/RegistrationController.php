@@ -3,12 +3,17 @@
 namespace App\Controller;
 
 use App\Form\User\RegistrationForm;
+use App\Repository\UserMapper;
 use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\RedirectResponse;
 use GaryClarke\Framework\Http\Response;
 
 class RegistrationController extends AbstractController
 {
+    public function __construct(private UserMapper $userMapper)
+    {
+    }
+
     public function index(): Response
     {
         return $this->render('register.html.twig');
@@ -20,7 +25,7 @@ class RegistrationController extends AbstractController
         // - validate fields
         // - map the fields to User object properties
         // - ultimately save the new User to the DB
-            $form = new RegistrationForm();
+            $form = new RegistrationForm($this->userMapper);
             $form->setFields(
                 $this->request->input('username'),
                 $this->request->input('password')
@@ -39,10 +44,12 @@ class RegistrationController extends AbstractController
         $user = $form->save();
 
         // Add a session success message
-
+        $this->request->getSession()->setFlash(
+            'success',
+            sprintf('User "%s" were successfully created', $user->getUsername()));
         // Log the user in
 
         // Redirect to somewhere useful
-
+        return  new RedirectResponse('/');
     }
 }

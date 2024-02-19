@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Repository;
 
@@ -24,7 +25,7 @@ class PostMapper
 
         $stmt->executeStatement();
 
-        $id = $this->connection->lastInsertId();
+        $id = (int)$this->connection->lastInsertId();
 
         $post->setId($id);
     }
