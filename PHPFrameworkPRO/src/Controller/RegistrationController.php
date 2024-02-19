@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Form\User\RegistrationForm;
 use GaryClarke\Framework\Controller\AbstractController;
+use GaryClarke\Framework\Http\RedirectResponse;
 use GaryClarke\Framework\Http\Response;
+use function mysql_xdevapi\getSession;
 
 class RegistrationController extends AbstractController
 {
@@ -27,9 +29,14 @@ class RegistrationController extends AbstractController
         // Validate
         // If validation errors,
         if($form->hasValidationErrors()){
-            dd($form->getValidationErrors());
+            // add to session, redirect to form
+            foreach($form->getValidationErrors() as $error){
+                $this->request->getSession()->setFlash('error', $error);
+            }
+
+            return new RedirectResponse('register');
         }
-        // add to session, redirect to form
+
 
         // register the user by calling $form->save()
 
