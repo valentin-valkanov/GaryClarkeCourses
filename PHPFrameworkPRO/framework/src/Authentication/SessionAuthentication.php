@@ -4,14 +4,17 @@ namespace GaryClarke\Framework\Authentication;
 
 class SessionAuthentication implements SessionAuthInterface
 {
+    public function __construct(private AuthRepositoryInterface $authRepository)
+    {
+    }
 
     public function authenticate(string $username, string $password): bool
     {
         // Validate username and password against the data source
         // Return true if authentication is successful, false otherwise
 
-        // query db for user using username
-        $user = $this->authUserRepository->findByUsername($username);
+        // query db for user using username. authRepository actually is userRepository
+        $user = $this->authRepository->findByUsername($username);
 
         if (!$user) {
             return false;
@@ -19,7 +22,7 @@ class SessionAuthentication implements SessionAuthInterface
 
         // Does the hashed user pw match the hash of the attempted password
         if (password_verify($password, $user->getPassword())) {
-
+            dd($user);
             // if yes, log the user in
             $this->login($user);
 

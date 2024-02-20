@@ -95,4 +95,7 @@ $container->add(\GaryClarke\Framework\Http\Middleware\RouterDispatch::class)
         $container
     ]);
 
+$container->add(\GaryClarke\Framework\Authentication\SessionAuthentication::class)
+    ->addArgument(\App\Repository\UserRepository::class);
+
 return $container;
