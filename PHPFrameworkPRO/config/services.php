@@ -100,5 +100,7 @@ $container->add(\GaryClarke\Framework\Authentication\SessionAuthentication::clas
         \App\Repository\UserRepository::class,
         \GaryClarke\Framework\Session\SessionInterface::class
         ]);
+$container->add(\GaryClarke\Framework\Http\Middleware\ExtractRouteInfo::class)
+    ->addArgument(new \League\Container\Argument\Literal\ArrayArgument($routes));
 
 return $container;
