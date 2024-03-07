@@ -1,7 +1,5 @@
 <?php
 
-use GaryClarke\Framework\Routing\RouterInterface;
-
 $dotenv = new \Symfony\Component\Dotenv\Dotenv();
 $dotenv->load(BASE_PATH . '/.env');
 
@@ -34,6 +32,7 @@ $container->extend(GaryClarke\Framework\Routing\RouterInterface::class)
         'setRoutes',
         [new \League\Container\Argument\Literal\ArrayArgument($routes)]
     );
+
 $container->add(
     \GaryClarke\Framework\Http\Middleware\RequestHandlerInterface::class,
     \GaryClarke\Framework\Http\Middleware\RequestHandler::class
@@ -63,7 +62,7 @@ $container->add('template-renderer-factory', \GaryClarke\Framework\Template\Twig
         new \League\Container\Argument\Literal\StringArgument($templatesPath)
     ]);
 
-$container->addShared('twig', function () use ($container){
+$container->addShared('twig', function () use ($container) {
     return $container->get('template-renderer-factory')->create();
 });
 
@@ -99,7 +98,8 @@ $container->add(\GaryClarke\Framework\Authentication\SessionAuthentication::clas
     ->addArguments([
         \App\Repository\UserRepository::class,
         \GaryClarke\Framework\Session\SessionInterface::class
-        ]);
+    ]);
+
 $container->add(\GaryClarke\Framework\Http\Middleware\ExtractRouteInfo::class)
     ->addArgument(new \League\Container\Argument\Literal\ArrayArgument($routes));
 

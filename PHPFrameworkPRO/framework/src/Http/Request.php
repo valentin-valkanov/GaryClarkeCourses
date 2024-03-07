@@ -2,7 +2,6 @@
 
 namespace GaryClarke\Framework\Http;
 
-use GaryClarke\Framework\Session\Session;
 use GaryClarke\Framework\Session\SessionInterface;
 
 class Request
