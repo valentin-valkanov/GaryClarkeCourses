@@ -23,9 +23,6 @@ class StartSession implements MiddleWareInterface
             $request->setSession($this->session);
         }
 
-
-
-
         return $requestHandler->handle($request);
     }
 }
