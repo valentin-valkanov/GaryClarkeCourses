@@ -8,7 +8,7 @@ use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 use GaryClarke\Framework\Session\SessionInterface;
 
-class Guest implements MiddleWareInterface
+class Guest implements MiddlewareInterface
 {
     public function __construct(private SessionInterface $session)
     {

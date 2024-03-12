@@ -8,6 +8,7 @@ class SessionAuthentication implements SessionAuthInterface
 {
     private AuthUserInterface $user;
     public const AUTH_KEY = 'auth_id';
+
     public function __construct(
         private AuthRepositoryInterface $authRepository,
         private SessionInterface $session
@@ -17,10 +18,7 @@ class SessionAuthentication implements SessionAuthInterface
 
     public function authenticate(string $username, string $password): bool
     {
-        // Validate username and password against the data source
-        // Return true if authentication is successful, false otherwise
-
-        // query db for user using username. authRepository actually is userRepository
+        // query db for user using username
         $user = $this->authRepository->findByUsername($username);
 
         if (!$user) {
@@ -28,14 +26,14 @@ class SessionAuthentication implements SessionAuthInterface
         }
 
         // Does the hashed user pw match the hash of the attempted password
-        if (!password_verify($password, $user->getPassword())) {
+        if (password_verify($password, $user->getPassword())) {
+
+            // if yes, log the user in
+            $this->login($user);
 
             // return true
-            return false;
+            return true;
         }
-
-        // if yes, log the user in
-        $this->login($user);
 
         // return false
         return false;
@@ -43,7 +41,7 @@ class SessionAuthentication implements SessionAuthInterface
 
     public function login(AuthUserInterface $user)
     {
-        // Start or resume the session
+        // Start a session
         $this->session->start();
 
         // Log the user in
@@ -55,18 +53,12 @@ class SessionAuthentication implements SessionAuthInterface
 
     public function logout()
     {
-        // Start or resume the session
-
-
-        // Unset all session variables
-
-
-        // Destroy the session
-
+        // TODO: Implement logout() method.
     }
 
     public function getUser(): AuthUserInterface
     {
         return $this->user;
     }
+
 }

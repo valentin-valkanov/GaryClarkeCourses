@@ -8,18 +8,17 @@ use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
 use GaryClarke\Framework\Session\SessionInterface;
 
-class Authenticate implements MiddleWareInterface
+class Authenticate implements MiddlewareInterface
 {
     public function __construct(private SessionInterface $session)
     {
     }
 
-    private bool $authenticated = true;
     public function process(Request $request, RequestHandlerInterface $requestHandler): Response
     {
         $this->session->start();
 
-        if(!$this->session->has(SessionAuthentication::AUTH_KEY)){
+        if (!$this->session->has(SessionAuthentication::AUTH_KEY)) {
             $this->session->setFlash('error', 'Please sign in');
             return new RedirectResponse('/login');
         }
