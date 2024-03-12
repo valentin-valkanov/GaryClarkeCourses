@@ -5,13 +5,13 @@ namespace GaryClarke\Framework\Session;
 class Session implements SessionInterface
 {
     private const FLASH_KEY = 'flash';
+    public const AUTH_KEY = 'auth_id';
 
     public function start(): void
     {
-        if(session_status() === PHP_SESSION_NONE){
+        if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-
     }
 
     public function set(string $key, $value): void
@@ -62,5 +62,10 @@ class Session implements SessionInterface
     public function clearFlash(): void
     {
         unset($_SESSION[self::FLASH_KEY]);
+    }
+
+    public function isAuthenticated(): bool
+    {
+        return $this->has(self::AUTH_KEY);
     }
 }

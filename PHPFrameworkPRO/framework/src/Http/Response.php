@@ -10,13 +10,14 @@ class Response
         private ?string $content = '',
         private int $status = 200,
         private array $headers = []
-        )
+    )
     {
-        //Must be set before sending content
-        //So best to create to instantiation like here
+        // Must be set before sending content
+        // So best to create on instantiation like here
         http_response_code($this->status);
     }
-    public function send():void
+
+    public function send(): void
     {
         echo $this->content;
     }

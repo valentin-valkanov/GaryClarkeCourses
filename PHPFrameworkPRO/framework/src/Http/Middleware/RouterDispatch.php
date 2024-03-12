@@ -7,7 +7,7 @@ use GaryClarke\Framework\Http\Response;
 use GaryClarke\Framework\Routing\RouterInterface;
 use Psr\Container\ContainerInterface;
 
-class RouterDispatch implements MiddleWareInterface
+class RouterDispatch implements MiddlewareInterface
 {
     public function __construct(
         private RouterInterface $router,
@@ -20,8 +20,8 @@ class RouterDispatch implements MiddleWareInterface
     {
         [$routeHandler, $vars] = $this->router->dispatch($request, $this->container);
 
-            $response = call_user_func_array($routeHandler, $vars);
+        $response = call_user_func_array($routeHandler, $vars);
 
-            return $response;
+        return $response;
     }
 }

@@ -7,8 +7,8 @@ use GaryClarke\Framework\Http\Response;
 
 class DashboardController extends AbstractController
 {
-        public function index(): Response
-        {
-            return $this->render('dashboard.html.twig');
-        }
+    public function index(): Response
+    {
+        return $this->render('dashboard.html.twig');
+    }
 }

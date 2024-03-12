@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Form\User\LoginForm;
 use GaryClarke\Framework\Authentication\SessionAuthentication;
 use GaryClarke\Framework\Controller\AbstractController;
 use GaryClarke\Framework\Http\RedirectResponse;
@@ -29,7 +28,7 @@ class LoginController extends AbstractController
         );
 
         // If successful, retrieve the user
-        if(!$userIsAuthenticated){
+        if (!$userIsAuthenticated) {
             $this->request->getSession()->setFlash('error', 'Bad creds');
             return new RedirectResponse('/login');
         }
@@ -37,8 +36,8 @@ class LoginController extends AbstractController
         $user = $this->authComponent->getUser();
 
         $this->request->getSession()->setFlash('success', 'You are now logged in');
+
         // Redirect the user to intended location
         return new RedirectResponse('/dashboard');
     }
-
 }

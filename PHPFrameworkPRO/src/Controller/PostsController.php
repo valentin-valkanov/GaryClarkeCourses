@@ -15,8 +15,7 @@ class PostsController extends AbstractController
 {
     public function __construct(
         private PostMapper $postMapper,
-        private PostRepository $postRepository,
-
+        private PostRepository $postRepository
     )
     {
     }
