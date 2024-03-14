@@ -358,12 +358,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/container.git",
-                "reference": "56f6f3fb9073129dd0342a8ecc197342efdf91a0"
+                "reference": "888b087cce8a0af46ba91f642eb480577729e92a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/container/zipball/56f6f3fb9073129dd0342a8ecc197342efdf91a0",
-                "reference": "56f6f3fb9073129dd0342a8ecc197342efdf91a0",
+                "url": "https://api.github.com/repos/thephpleague/container/zipball/888b087cce8a0af46ba91f642eb480577729e92a",
+                "reference": "888b087cce8a0af46ba91f642eb480577729e92a",
                 "shasum": ""
             },
             "require": {
@@ -425,7 +425,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/container/issues",
-                "source": "https://github.com/thephpleague/container/tree/4.2.1"
+                "source": "https://github.com/thephpleague/container/tree/4.x"
             },
             "funding": [
                 {
@@ -433,7 +433,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-13T11:04:59+00:00"
+            "time": "2024-03-14T07:50:32+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -990,12 +990,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec"
+                "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
-                "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
+                "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
                 "shasum": ""
             },
             "require": {
@@ -1047,7 +1047,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.29.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/1.x"
             },
             "funding": [
                 {
@@ -1063,7 +1063,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-29T20:11:03+00:00"
+            "time": "2024-03-14T13:49:05+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1295,12 +1295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13"
+                "reference": "09691fc86e9e9bf2b936dcc9d1590a3061d223a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/139676794dc1e9231bf7bcd123cfc0c99182cb13",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/09691fc86e9e9bf2b936dcc9d1590a3061d223a7",
+                "reference": "09691fc86e9e9bf2b936dcc9d1590a3061d223a7",
                 "shasum": ""
             },
             "require": {
@@ -1344,9 +1344,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/master"
             },
-            "time": "2024-03-05T20:51:40+00:00"
+            "time": "2024-03-13T19:24:50+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -1473,12 +1473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "1b67fd76b02bbb329d68766d25ac8a0313b72da5"
+                "reference": "598f700ccfdad63d683ec86e276c7e294a8883c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1b67fd76b02bbb329d68766d25ac8a0313b72da5",
-                "reference": "1b67fd76b02bbb329d68766d25ac8a0313b72da5",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/598f700ccfdad63d683ec86e276c7e294a8883c4",
+                "reference": "598f700ccfdad63d683ec86e276c7e294a8883c4",
                 "shasum": ""
             },
             "require": {
@@ -1543,7 +1543,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-13T12:27:43+00:00"
+            "time": "2024-03-13T12:30:36+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1796,12 +1796,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "59ad5c9dcd83cd26af119c52b883da619a36634d"
+                "reference": "729330acfef09ed16b878e822b387e45189b0c2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/59ad5c9dcd83cd26af119c52b883da619a36634d",
-                "reference": "59ad5c9dcd83cd26af119c52b883da619a36634d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/729330acfef09ed16b878e822b387e45189b0c2f",
+                "reference": "729330acfef09ed16b878e822b387e45189b0c2f",
                 "shasum": ""
             },
             "require": {
@@ -1889,7 +1889,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-13T06:25:58+00:00"
+            "time": "2024-03-14T06:09:15+00:00"
         },
         {
             "name": "roave/security-advisories",
@@ -1897,12 +1897,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0483c0973a9b7cba2119e98f2df6adc5ea87f3e2"
+                "reference": "eedc674d89085b0199bd96bfad410404fb2f5dbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0483c0973a9b7cba2119e98f2df6adc5ea87f3e2",
-                "reference": "0483c0973a9b7cba2119e98f2df6adc5ea87f3e2",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eedc674d89085b0199bd96bfad410404fb2f5dbf",
+                "reference": "eedc674d89085b0199bd96bfad410404fb2f5dbf",
                 "shasum": ""
             },
             "conflict": {
@@ -2629,7 +2629,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-13T10:04:34+00:00"
+            "time": "2024-03-13T21:04:41+00:00"
         },
         {
             "name": "sebastian/cli-parser",
