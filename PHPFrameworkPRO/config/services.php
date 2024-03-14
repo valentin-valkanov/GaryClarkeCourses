@@ -34,9 +34,9 @@ $container->add(
 
 $container->add(GaryClarke\Framework\Http\Kernel::class)
     ->addArguments([
-        GaryClarke\Framework\Routing\RouterInterface::class,
         $container,
-        \GaryClarke\Framework\Http\Middleware\RequestHandlerInterface::class
+        \GaryClarke\Framework\Http\Middleware\RequestHandlerInterface::class,
+        \GaryClarke\Framework\EventDispatcher\EventDispatcher::class
     ]);
 
 $container->add(\GaryClarke\Framework\Console\Application::class)
