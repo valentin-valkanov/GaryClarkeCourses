@@ -32,6 +32,7 @@ class Kernel
         } catch (\Exception $exception) {
             $response = $this->createExceptionResponse($exception);
         }
+        $response->setStatus(501);
         $this->eventDispatcher->dispatch(new ResponseEvent($request, $response));
         return $response;
     }
