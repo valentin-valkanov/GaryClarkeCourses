@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Repository;
 
 use App\Entity\User;
@@ -25,7 +25,7 @@ class UserMapper
 
         $stmt->executeStatement();
 
-        $id = $this->dataMapper->save($user);
+        $id = (int)$this->dataMapper->save($user);
 
         $user->setId($id);
     }

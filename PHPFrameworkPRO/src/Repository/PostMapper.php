@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace App\Repository;
 
 use App\Entity\Post;
@@ -24,7 +25,7 @@ class PostMapper
 
         $stmt->executeStatement();
 
-        $id = $this->dataMapper->save($post);
+        $id = (int)$this->dataMapper->save($post);
 
         $post->setId($id);
     }
