@@ -2,12 +2,9 @@
 
 namespace GaryClarke\Framework\Http;
 
-use Doctrine\DBAL\Connection;
 use GaryClarke\Framework\EventDispatcher\EventDispatcher;
 use GaryClarke\Framework\Http\Event\ResponseEvent;
 use GaryClarke\Framework\Http\Middleware\RequestHandlerInterface;
-use GaryClarke\Framework\Routing\Router;
-use GaryClarke\Framework\Routing\RouterInterface;
 use Psr\Container\ContainerInterface;
 
 class Kernel

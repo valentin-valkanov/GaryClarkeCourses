@@ -29,4 +29,10 @@ class Router implements RouterInterface
 
         return [$routeHandler, $routeHandlerArgs];
     }
+
+    public function setRoutes(array $routes): void
+    {
+        $this->routes = $routes;
+    }
+
 }
