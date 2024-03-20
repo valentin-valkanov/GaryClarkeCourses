@@ -1,5 +1,4 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1); // public/index.php
 
 use GaryClarke\Framework\Http\Kernel;
 use GaryClarke\Framework\Http\Request;
@@ -9,6 +8,9 @@ define('BASE_PATH', dirname(__DIR__));
 require_once BASE_PATH . '/vendor/autoload.php';
 
 $container = require BASE_PATH . '/config/services.php';
+
+// bootstrapping
+require BASE_PATH . '/bootstrap/bootstrap.php';
 
 // request received
 $request = Request::createFromGlobals();
