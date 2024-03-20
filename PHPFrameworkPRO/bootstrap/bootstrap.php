@@ -4,6 +4,8 @@ $providers = [
 ];
 
 foreach ($providers as $providerClass) {
-    $provider = $container->get($providerClass);
+    if (isset($container)) {
+        $provider = $container->get($providerClass);
+    }
     $provider->register();
 }
