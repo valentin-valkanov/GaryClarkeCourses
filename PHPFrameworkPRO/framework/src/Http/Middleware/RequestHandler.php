@@ -12,6 +12,7 @@ class RequestHandler implements RequestHandlerInterface
     private array $middleware = [
         ExtractRouteInfo::class,
         StartSession::class,
+        VerifyCsrfToken::class,
         RouterDispatch::class
     ];
 
@@ -24,7 +25,7 @@ class RequestHandler implements RequestHandlerInterface
         // If there are no middleware classes to execute, return a default response
         // A response should have been returned before the list becomes empty
         if (empty($this->middleware)) {
-            return new Response("It's totally borked, mate. Contact support", 500);
+            return new Response("It's totally broken, mate. Contact support", 500);
         }
 
         // Get the next middleware class to execute
